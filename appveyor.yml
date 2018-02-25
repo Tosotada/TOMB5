@@ -33,6 +33,7 @@ install:
   
 before_build:
   - cmd: cd %clone_folder%
+  - cmd: mingw32-make
   #- cmd: dir /s
   - cmd: md BUILD
   - cmd: cd BUILD

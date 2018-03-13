@@ -521,6 +521,7 @@ void DrawRooms(short current_room)//643FC(<), 64B1C(<) (F)
 	else
 	{
 		//loc_64BA0
+		DrawRoomletList();
 		//unsigned long* v1 = (unsigned long*)RelocPtr[3];
 		//jalr v1[0];
 	}

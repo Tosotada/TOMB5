@@ -30,12 +30,12 @@ install:
   - set PSPATHS_URL="http://www.psxdev.net/forum/download/file.php?id=537&sid=c734e74c4587111e3c739d592072c56a"
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - appveyor DownloadFile %PSPATHS_URL% -FileName pspath.reg
-  - 7z x PSXSDK.zip -oC:\
   - cmd: regedit /S "pspath.reg"
-  - cmd: move "c:\Psy-Q - 46" "c:\psyq"
-  - cmd: icacls "C:\psyq" /grant Users:F
+  - 7z x PSXSDK.zip -oC:\
   
 before_build:
+  - cmd: move "c:\Psy-Q - 46" "c:\psyq"
+  - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: mingw32-make
   
 artifacts:

@@ -31,9 +31,9 @@ install:
   - 7z x PSXSDK.zip -oC:\
   
 before_build:
-  - cmd: cd %clone_folder%
-  - cmd: mingw32-make
-  - cmd: cd DISC
+  - ps: cd %clone_folder%
+  - ps: mingw32-make
+  - ps: cd DISC
   
 artifacts:
    - path: DISC\*.zip

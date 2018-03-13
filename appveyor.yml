@@ -32,9 +32,9 @@ install:
   
 before_build:
  # - ps: cd %clone_folder%
- # - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: move "c:\Psy-Q - 46" "c:\psyq"
-  - ps: mingw32-make
+  - cmd: icacls "C:\psyq" /grant Users:F
+  - cmd: mingw32-make
   
 artifacts:
    - path: DISC\*.zip

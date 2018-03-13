@@ -41,6 +41,7 @@ install:
   
 before_build:
   - cmd: move "c:\Psy-Q - 46" "c:\psyq"
+  - cmd: mkdir C:\TEMP
   - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: icacls "C:\TEMP" /grant Users:F
   - cmd: mingw32-make

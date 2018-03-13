@@ -9,14 +9,11 @@ branches:
   
 skip_tags: true
 
-#image: Visual Studio 2017
-
 configuration:
 - Debug
 - Release
 
 clone_folder: c:\projects\TOMB5
-#lib_folder: %clone_folder%\EXTERNAL
 
 build:
   project: c:\projects\TOMB5\BUILD\TOMB5.sln
@@ -28,13 +25,13 @@ platform:
   
 install:
   - set QTDIR=C:\Qt\5.7\mingw53_32
-  - set PATH=%PATH%;C:\MinGW\bin;C:\psyq\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
+  - set PATH=%PATH%;C:\MinGW\bin;C:\Psy-Q - 46\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
   - set PSYQ_SDK_URL="http://psxdev.net/downloads/Psy-Q_46.zip"
   - set SDL2_URL="https://www.libsdl.org/release/SDL2-devel-2.0.7-VC.zip"
   - appveyor DownloadFile %SDL2_URL% -FileName SDL2.zip
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - 7z x SDL2.zip -oC:\projects\TOMB5\EXTERNAL\
-  - 7z x PSXSDK.zip -oC:\psyq
+  - 7z x PSXSDK.zip -oC:\
   - set SDL2=C:\projects\TOMB5\EXTERNAL\SDL2-2.0.7
   
 before_build:

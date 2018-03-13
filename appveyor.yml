@@ -35,14 +35,14 @@ install:
   - set PSYQ_PATH=C:\psyq\bin
   - set TMPDIR=C:\TEMP
   - set PATH=%PATH%;C:\MinGW\bin;C:\psyq\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
-  - set PSYQ_SDK_URL="http://psxdev.net/downloads/Psy-Q_46.zip"
-  - set PSPATHS_URL="http://www.psxdev.net/forum/download/file.php?id=537&sid=c734e74c4587111e3c739d592072c56a"
+  - set PSYQ_SDK_URL="https://docs.google.com/uc?export=download&confirm=VYeJ&id=0B_GAaDjR83rLZGVaZ2pvV2tjSVE"
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - 7z x PSXSDK.zip -oC:\
   
 before_build:
-  - cmd: move "c:\Psy-Q - 46" "c:\psyq"
+  #- cmd: move "c:\Psy-Q - 46" "c:\psyq"
   - cmd: icacls "C:\psyq" /grant Users:F
+  - cmd: icacls "C:\TEMP" /grant Users:F
   - cmd: mingw32-make
   
 artifacts:

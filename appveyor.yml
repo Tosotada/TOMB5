@@ -29,8 +29,8 @@ install:
   - set PSYQ_SDK_URL="http://psxdev.net/downloads/Psy-Q_46.zip"
   - set PSPATHS_URL="http://www.psxdev.net/forum/download/file.php?id=537&sid=c734e74c4587111e3c739d592072c56a"
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
-  - appveyor DownloadFile %PSPATHS_URL% -FileName pspath.reg
-  - cmd: regedit /S "pspath.reg"
+  - appveyor DownloadFile %PSPATHS_URL% -FileName c:\pspath.reg
+  - cmd: regedit /S c:\pspath.reg
   - 7z x PSXSDK.zip -oC:\
   
 before_build:

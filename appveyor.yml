@@ -27,21 +27,13 @@ install:
   - set QTDIR=C:\Qt\5.7\mingw53_32
   - set PATH=%PATH%;C:\MinGW\bin;C:\Psy-Q - 46\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
   - set PSYQ_SDK_URL="http://psxdev.net/downloads/Psy-Q_46.zip"
-  - set SDL2_URL="https://www.libsdl.org/release/SDL2-devel-2.0.7-VC.zip"
-  - appveyor DownloadFile %SDL2_URL% -FileName SDL2.zip
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
-  - 7z x SDL2.zip -oC:\projects\TOMB5\EXTERNAL\
   - 7z x PSXSDK.zip -oC:\
-  - set SDL2=C:\projects\TOMB5\EXTERNAL\SDL2-2.0.7
   
 before_build:
   - cmd: cd %clone_folder%
-  #- cmd: dir /s
   - cmd: mingw32-make
   - cmd: cd DISC
-  #- cmd: if "%platform%"=="Win32" set CMAKE_GENERATOR_NAME=Visual Studio 15 2017
-  #- cmd: if "%platform%"=="x64"   set CMAKE_GENERATOR_NAME=Visual Studio 15 2017 Win64
-  #- cmd: cmake -G "%CMAKE_GENERATOR_NAME%" -DCMAKE_BUILD_TYPE=%configuration% -DDART_MSVC_DEFAULT_OPTIONS="%MSVC_DEFAULT_OPTIONS%" ..
   
 artifacts:
    - path: DISC\*.zip

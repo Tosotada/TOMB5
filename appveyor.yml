@@ -33,7 +33,6 @@ install:
 before_build:
  # - ps: cd %clone_folder%
   - ps: mingw32-make
-  - ps: cd DISC
   
 artifacts:
    - path: DISC\*.zip
@@ -42,6 +41,6 @@ artifacts:
 after_build:
   - cmd: cd SPEC_PSXPC
   - cmd: copy "C:\projects\TOMB5\EXTERNAL\SDL2-2.0.7\lib\x86\SDL2.dll" "%configuration%\"
-  - 7z a TOMB5.zip "%configuration%\"
+  - 7z a TOMB5.zip "DISC\"
   
 #build: off

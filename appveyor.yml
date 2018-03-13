@@ -38,6 +38,7 @@ install:
   
 before_build:
   - cmd: cd %clone_folder%
+  - cmd: mingw64-make
   #- cmd: dir /s
   - cmd: mingw32-make
   - cmd: cd DISC

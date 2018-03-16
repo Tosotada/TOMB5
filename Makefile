@@ -91,7 +91,8 @@ all: $(OFILES)
 #---------------------------------------------------------------------------------
 cleanall:
 	rm -f $(OFILES) $(DISC_ROOTFD)$(TARGET).CPE $(DISC_ROOTFD)$(TARGET).SYM $(DISC_ROOTFD)$(TARGET).MAP
-
+	cpe2x $(DISC_ROOTFD)$(TARGET).CPE
+	
 clean: cleanall
 
 #---------------------------------------------------------------------------------

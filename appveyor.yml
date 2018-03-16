@@ -46,6 +46,6 @@ artifacts:
      name: Binaries
   
 after_build:
-  - 7z a TOMB5.zip "DISC\"
+  - 7z a TOMB5.zip {clone_folder}\DISC\
   
 #build: off

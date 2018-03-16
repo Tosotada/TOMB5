@@ -16,7 +16,6 @@ configuration:
 clone_folder: c:\projects\TOMB5
 
 build:
-  project: c:\projects\TOMB5\BUILD\TOMB5.sln
   verbosity: minimal
   
 platform:
@@ -50,8 +49,6 @@ artifacts:
      name: Binaries
   
 after_build:
-  - cmd: cd SPEC_PSXPC
-  - cmd: copy "C:\projects\TOMB5\EXTERNAL\SDL2-2.0.7\lib\x86\SDL2.dll" "%configuration%\"
   - 7z a TOMB5.zip "DISC\"
   
 #build: off

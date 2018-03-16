@@ -42,7 +42,7 @@ build_script:
   - cmd: mingw32-make
   
 artifacts:
-   - path: *.zip
+   - path: \*.zip
      name: Binaries
   
 after_build:

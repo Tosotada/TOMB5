@@ -35,7 +35,7 @@ install:
   - set PSYQ_PATH=C:\psyq\bin
   - set TMPDIR=C:\TEMP
   - set PATH=%PATH%;C:\MinGW\bin;C:\psyq\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
-  - set PSYQ_SDK_URL="https://expirebox.com/files/a8269ccd797525001672503d20674a45.zip"
+  - set PSYQ_SDK_URL="https://dl.dropboxusercontent.com/content_link/J9bHWGAm7kTJFGWD2IQAsVHOfz5xEfNYBpzrQIQGDFYC8xPkFIWHYtGjo9jkWx0K/file?dl=1"
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - 7z x PSXSDK.zip -oC:\
   

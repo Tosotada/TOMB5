@@ -84,7 +84,7 @@ OFILES		= $(CFILES:.C=.obj) $(AFILES:.MIP=.obj)
 #---------------------------------------------------------------------------------
 all: $(OFILES)
 	$(CC) -Xo$(PROGADDR) $(CFLAGS) $(addprefix -L,$(LIBDIRS)) $(addprefix -l,$(LIBS)) $(OFILES) -o $(DISC_ROOTFD)$(TARGET).CPE,$(DISC_ROOTFD)$(TARGET).SYM,$(DISC_ROOTFD)$(TARGET).MAP
-	cpe2x $(DISC_ROOTFD)$(TARGET).CPE
+#	cpe2x $(DISC_ROOTFD)$(TARGET).CPE
 
 #---------------------------------------------------------------------------------
 # Clean-up rule

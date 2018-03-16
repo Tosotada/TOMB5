@@ -35,12 +35,12 @@ install:
   - set PSYQ_PATH=C:\psyq\bin
   - set TMPDIR=C:\TEMP
   - set PATH=%PATH%;C:\MinGW\bin;C:\psyq\bin;%QTDIR%\bin;%QTDIR%\Tools\mingw530_32\bin;
-  - set PSYQ_SDK_URL="http://psxdev.net/downloads/Psy-Q_46.zip"
+  - set PSYQ_SDK_URL="http://s000.tinyupload.com/download.php?file_id=33130430933581816214&t=3313043093358181621406896"
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - 7z x PSXSDK.zip -oC:\
   
 before_build:
-  - cmd: move "c:\Psy-Q - 46" "c:\psyq"
+  #- cmd: move "c:\Psy-Q - 46" "c:\psyq"
   - cmd: mkdir C:\TEMP
   - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: icacls "C:\TEMP" /grant Users:F

@@ -42,10 +42,10 @@ build_script:
   - cmd: mingw32-make
   
 artifacts:
-   - path: DISC\*.zip
+   - path: *.zip
      name: Binaries
   
 after_build:
-  - 7z a TOMB5.zip %clone_folder%\DISC\
+  - 7z a TOMB5.zip "DISC\"
   
 #build: off

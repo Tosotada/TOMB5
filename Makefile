@@ -33,6 +33,7 @@ INCLUDES	= SPEC_PSX/ GAME/
 DEFS		= PSX_VERSION DISC_VERSION NTSC_VERSION USE_ASM
 ISOXML		= TOMB5US.XML
 DISC_ROOTFD	= DISC/
+CURRENT_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 #---------------------------------------------------------------------------------
 # LIBDIRS	- Library search directories
@@ -83,6 +84,7 @@ OFILES		= $(CFILES:.C=.obj) $(AFILES:.MIP=.obj)
 #---------------------------------------------------------------------------------
 all: $(OFILES)
 	$(CC) -Xo$(PROGADDR) $(CFLAGS) $(addprefix -L,$(LIBDIRS)) $(addprefix -l,$(LIBS)) $(OFILES) -o $(DISC_ROOTFD)$(TARGET).CPE,$(DISC_ROOTFD)$(TARGET).SYM,$(DISC_ROOTFD)$(TARGET).MAP
+	cpe2x $(DISC_ROOTFD)$(TARGET).CPE
 
 #---------------------------------------------------------------------------------
 # Clean-up rule

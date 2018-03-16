@@ -10,14 +10,12 @@ branches:
 skip_tags: true
 
 configuration:
-- Debug
 - Release
 
 clone_folder: c:\projects\TOMB5
 
 platform:
   - Win32
-  #- x64
   
 install:
   - set QTDIR=C:\Qt\5.7\mingw53_32

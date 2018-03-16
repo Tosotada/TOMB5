@@ -14,7 +14,7 @@ configuration:
 - Release
 
 clone_folder: c:\projects\TOMB5
-  
+
 platform:
   - Win32
   #- x64
@@ -35,12 +35,10 @@ install:
   - appveyor DownloadFile %PSYQ_SDK_URL% -FileName PSXSDK.zip
   - 7z x PSXSDK.zip -oC:\
   
-before_build:
+build_script:
   - cmd: mkdir C:\TEMP
   - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: icacls "C:\TEMP" /grant Users:F
-  
-test_script:
   - cmd: mingw32-make
   
 artifacts:

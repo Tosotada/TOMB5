@@ -42,6 +42,8 @@ before_build:
   - cmd: mkdir C:\TEMP
   - cmd: icacls "C:\psyq" /grant Users:F
   - cmd: icacls "C:\TEMP" /grant Users:F
+  
+test_script:
   - cmd: mingw32-make
   
 artifacts:

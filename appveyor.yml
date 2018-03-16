@@ -14,9 +14,6 @@ configuration:
 - Release
 
 clone_folder: c:\projects\TOMB5
-
-build:
-  verbosity: minimal
   
 platform:
   - Win32
